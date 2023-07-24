@@ -6,11 +6,7 @@ metadata:
   name: manager-role
 rules:
 - apiGroups:
-<<<<<<< HEAD
   - iaas.yusur.io
-=======
-  - iaas.yusur.io.iaas.yusur.io
->>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
   resources:
   - baremetalhosts
   verbs:
@@ -22,21 +18,13 @@ rules:
   - update
   - watch
 - apiGroups:
-<<<<<<< HEAD
   - iaas.yusur.io
-=======
-  - iaas.yusur.io.iaas.yusur.io
->>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
   resources:
   - baremetalhosts/finalizers
   verbs:
   - update
 - apiGroups:
-<<<<<<< HEAD
   - iaas.yusur.io
-=======
-  - iaas.yusur.io.iaas.yusur.io
->>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
   resources:
   - baremetalhosts/status
   verbs:

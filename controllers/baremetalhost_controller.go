@@ -33,15 +33,9 @@ type BareMetalHostReconciler struct {
 	Scheme *runtime.Scheme
 }
 
-<<<<<<< HEAD
 //+kubebuilder:rbac:groups=iaas.yusur.io,resources=baremetalhosts,verbs=get;list;watch;create;update;patch;delete
 //+kubebuilder:rbac:groups=iaas.yusur.io,resources=baremetalhosts/status,verbs=get;update;patch
 //+kubebuilder:rbac:groups=iaas.yusur.io,resources=baremetalhosts/finalizers,verbs=update
-=======
-//+kubebuilder:rbac:groups=iaas.yusur.io.iaas.yusur.io,resources=baremetalhosts,verbs=get;list;watch;create;update;patch;delete
-//+kubebuilder:rbac:groups=iaas.yusur.io.iaas.yusur.io,resources=baremetalhosts/status,verbs=get;update;patch
-//+kubebuilder:rbac:groups=iaas.yusur.io.iaas.yusur.io,resources=baremetalhosts/finalizers,verbs=update
->>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
 
 // Reconcile is part of the main kubernetes reconciliation loop which aims to
 // move the current state of the cluster closer to the desired state.
