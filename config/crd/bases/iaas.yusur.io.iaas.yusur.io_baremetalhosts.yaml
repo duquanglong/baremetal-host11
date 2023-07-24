@@ -35,6 +35,25 @@ spec:
           spec:
             description: BareMetalHostSpec defines the desired state of BareMetalHost
             properties:
+              bmc:
+                description: How do we connect to the BMC?
+                properties:
+                  address:
+                    description: Address holds the URL for accessing the controller
+                      on the network.
+                    type: string
+                  password:
+                    type: string
+                  port:
+                    type: integer
+                  username:
+                    type: string
+                required:
+                - address
+                - password
+                - port
+                - username
+                type: object
               foo:
                 description: Foo is an example field of BareMetalHost. Edit baremetalhost_types.go
                   to remove/update
@@ -42,6 +61,12 @@ spec:
             type: object
           status:
             description: BareMetalHostStatus defines the observed state of BareMetalHost
+            properties:
+              state:
+                description: 'INSERT ADDITIONAL STATUS FIELD - define observed state
+                  of cluster Important: Run "make" to regenerate code after modifying
+                  this file'
+                type: string
             type: object
         type: object
     served: true
