@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # permissions to do leader election.
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -42,3 +43,49 @@ rules:
   verbs:
   - create
   - patch
+=======
+# permissions to do leader election.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  labels:
+    app.kubernetes.io/name: role
+    app.kubernetes.io/instance: leader-election-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: baremetal-host
+    app.kubernetes.io/part-of: baremetal-host
+    app.kubernetes.io/managed-by: kustomize
+  name: leader-election-role
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - configmaps
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - coordination.k8s.io
+  resources:
+  - leases
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - ""
+  resources:
+  - events
+  verbs:
+  - create
+  - patch
+>>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17

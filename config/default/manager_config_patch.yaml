@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -8,3 +9,15 @@ spec:
     spec:
       containers:
       - name: manager
+=======
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: controller-manager
+  namespace: system
+spec:
+  template:
+    spec:
+      containers:
+      - name: manager
+>>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17

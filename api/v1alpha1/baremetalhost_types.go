@@ -23,6 +23,19 @@ import (
 // EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
 // NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
 
+<<<<<<< HEAD
+=======
+type BMCDetails struct {
+
+	// Address holds the URL for accessing the controller on the
+	// network.
+	Address  string `json:"address"`
+	Port     int    `json:"port"`
+	UserName string `json:"username"`
+	Password string `json:"password"`
+}
+
+>>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
 // BareMetalHostSpec defines the desired state of BareMetalHost
 type BareMetalHostSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
@@ -30,12 +43,48 @@ type BareMetalHostSpec struct {
 
 	// Foo is an example field of BareMetalHost. Edit baremetalhost_types.go to remove/update
 	Foo string `json:"foo,omitempty"`
+<<<<<<< HEAD
 }
 
+=======
+	// How do we connect to the BMC?
+	BMC BMCDetails `json:"bmc,omitempty"`
+}
+
+type OperationalStatus string
+
+const (
+	// OperationalStatusOK is the status value for when the host is
+	// configured correctly and is manageable.
+	OperationalStatusOK   OperationalStatus = "available"
+	OperationalStatusUsed OperationalStatus = "used"
+	// OperationalStatusDiscovered is the status value for when the
+	// host is only partially configured, such as when when the BMC
+	// address is known but the login credentials are not.
+	OperationalStatusDiscovered OperationalStatus = "discovered"
+
+	// OperationalStatusError is the status value for when the host
+	// has any sort of error.
+	OperationalStatusError OperationalStatus = "error"
+
+	// OperationalStatusDelayed is the status value for when the host
+	// deployment needs to be delayed to limit simultaneous hosts provisioning
+	OperationalStatusDelayed = "delayed"
+
+	// OperationalStatusDetached is the status value when the host is
+	// marked unmanaged via the detached annotation
+	OperationalStatusDetached OperationalStatus = "detached"
+)
+
+>>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
 // BareMetalHostStatus defines the observed state of BareMetalHost
 type BareMetalHostStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+<<<<<<< HEAD
+=======
+	State OperationalStatus `json:"state,omitempty"`
+>>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
 }
 
 //+kubebuilder:object:root=true

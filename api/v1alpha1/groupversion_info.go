@@ -16,7 +16,11 @@ limitations under the License.
 
 // Package v1alpha1 contains API Schema definitions for the iaas.yusur.io v1alpha1 API group
 // +kubebuilder:object:generate=true
+<<<<<<< HEAD
 // +groupName=iaas.yusur.io
+=======
+// +groupName=iaas.yusur.io.iaas.yusur.io
+>>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
 package v1alpha1
 
 import (
@@ -26,7 +30,11 @@ import (
 
 var (
 	// GroupVersion is group version used to register these objects
+<<<<<<< HEAD
 	GroupVersion = schema.GroupVersion{Group: "iaas.yusur.io", Version: "v1alpha1"}
+=======
+	GroupVersion = schema.GroupVersion{Group: "iaas.yusur.io.iaas.yusur.io", Version: "v1alpha1"}
+>>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
 
 	// SchemeBuilder is used to add go types to the GroupVersionKind scheme
 	SchemeBuilder = &scheme.Builder{GroupVersion: GroupVersion}

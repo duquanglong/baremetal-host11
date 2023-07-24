@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # permissions for end users to edit baremetalhosts.
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -29,3 +30,36 @@ rules:
   - baremetalhosts/status
   verbs:
   - get
+=======
+# permissions for end users to edit baremetalhosts.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: baremetalhost-editor-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: baremetal-host
+    app.kubernetes.io/part-of: baremetal-host
+    app.kubernetes.io/managed-by: kustomize
+  name: baremetalhost-editor-role
+rules:
+- apiGroups:
+  - iaas.yusur.io.iaas.yusur.io
+  resources:
+  - baremetalhosts
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - iaas.yusur.io.iaas.yusur.io
+  resources:
+  - baremetalhosts/status
+  verbs:
+  - get
+>>>>>>> 6fb4727e047a0474d2b56680e547f76496abdb17
