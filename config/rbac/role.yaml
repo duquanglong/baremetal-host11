@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - iaas.yusur.io
+  resources:
+  - baremetalhosts
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - iaas.yusur.io
+  resources:
+  - baremetalhosts/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - iaas.yusur.io
+  resources:
+  - baremetalhosts/status
+  verbs:
+  - get
+  - patch
+  - update
