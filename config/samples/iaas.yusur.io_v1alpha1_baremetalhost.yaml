@@ -1,0 +1,12 @@
+apiVersion: iaas.yusur.io.iaas.yusur.io/v1alpha1
+kind: BareMetalHost
+metadata:
+  labels:
+    app.kubernetes.io/name: baremetalhost
+    app.kubernetes.io/instance: baremetalhost-sample
+    app.kubernetes.io/part-of: baremetal-host
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: baremetal-host
+  name: baremetalhost-sample
+spec:
+  # TODO(user): Add fields here
